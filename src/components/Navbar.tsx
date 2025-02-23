@@ -1,8 +1,13 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import LanguageSelector from './LanguageSelector';
 
-const Navbar = () => {
+interface NavbarProps {
+  onOpenCV?: () => void;
+}
+
+const Navbar = ({ onOpenCV }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -37,8 +42,9 @@ const Navbar = () => {
             <a href="#home" className="nav-link">Home</a>
             <a href="#services" className="nav-link">Services</a>
             <a href="#portfolio" className="nav-link">Portfolio</a>
-            <a href="#" className="nav-link">CV</a>
+            <button onClick={onOpenCV} className="nav-link">CV</button>
             <a href="#contact" className="nav-link">Contact</a>
+            <LanguageSelector />
           </div>
         </div>
       </div>
