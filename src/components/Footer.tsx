@@ -19,6 +19,7 @@ const Footer = () => {
               <li><a href="#home" className="text-primary-foreground/80 hover:text-primary-foreground">Home</a></li>
               <li><a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground">Services</a></li>
               <li><a href="#portfolio" className="text-primary-foreground/80 hover:text-primary-foreground">Portfolio</a></li>
+              <li><a href="/cv" className="text-primary-foreground/80 hover:text-primary-foreground">CV</a></li>
               <li><a href="#contact" className="text-primary-foreground/80 hover:text-primary-foreground">Contact</a></li>
             </ul>
           </div>
@@ -26,9 +27,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li className="text-primary-foreground/80">Dashboard Development</li>
-              <li className="text-primary-foreground/80">Data Integration</li>
-              <li className="text-primary-foreground/80">Power BI Training</li>
+              <li>
+                <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  Dashboard Development
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  Data Integration
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-primary-foreground/80 hover:text-primary-foreground">
+                  Power BI Training
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -43,7 +56,7 @@ const Footer = () => {
                  className="p-2 rounded-full hover:bg-primary-foreground/10 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:contact@example.com"
+              <a href="mailto:hamidbanafunzi@hotmail.co.uk"
                  className="p-2 rounded-full hover:bg-primary-foreground/10 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>

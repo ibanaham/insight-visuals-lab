@@ -1,6 +1,14 @@
 
-import { useState } from 'react';
+import { useState, createContext, useContext } from 'react';
 import { Globe } from 'lucide-react';
+import { useTranslation } from '../lib/translations';
+
+export const LanguageContext = createContext({
+  language: 'en',
+  setLanguage: (lang: string) => {}
+});
+
+export const useLanguage = () => useContext(LanguageContext);
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -12,12 +20,11 @@ const languages = [
 
 const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState('en');
+  const { language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (langCode: string) => {
-    setSelectedLang(langCode);
+    setLanguage(langCode);
     setIsOpen(false);
-    // Here you would typically handle language change
   };
 
   return (
@@ -27,7 +34,7 @@ const LanguageSelector = () => {
         className="p-2 rounded-full hover:bg-muted transition-colors flex items-center gap-2"
       >
         <Globe className="w-5 h-5" />
-        <span className="text-sm hidden md:inline">{languages.find(l => l.code === selectedLang)?.name}</span>
+        <span className="text-sm hidden md:inline">{languages.find(l => l.code === language)?.name}</span>
       </button>
 
       {isOpen && (
@@ -37,7 +44,7 @@ const LanguageSelector = () => {
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`w-full px-4 py-2 text-left hover:bg-muted transition-colors ${
-                selectedLang === lang.code ? 'text-secondary font-medium' : ''
+                language === lang.code ? 'text-secondary font-medium' : ''
               }`}
             >
               {lang.name}
