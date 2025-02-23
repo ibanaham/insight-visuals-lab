@@ -32,8 +32,24 @@ const CV = () => {
           </div>
         </section>
 
-        {/* Experience Timeline */}
+        {/* Skills Section */}
         <section className="py-12">
+          <div className="container px-4">
+            <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+            <ul className="list-disc list-inside space-y-2 text-foreground/80">
+              <li>Proficient in leveraging advanced data tools including Python, Power BI, Excel and SQL for business optimization and actionable insights.</li>
+              <li>Experienced in managing and analysing large, complex datasets, aligning with performance management frameworks.</li>
+              <li>Developed Power BI reports and dashboards for strategic analysis and performance reporting.</li>
+              <li>Demonstrated leadership in coordinating resources and managing projects from inception to completion.</li>
+              <li>Skilled in stakeholder engagement, understanding data requirements, and delivering insights for decision-making.</li>
+              <li>Committed to continuous learning, evidenced by multiple certifications in Microsoft and data analytics.</li>
+              <li>Strong analytical skills, capable of translating complex data into clear, actionable insights for senior leadership.</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Experience Timeline */}
+        <section className="py-12 bg-muted">
           <div className="container px-4">
             <h2 className="text-2xl font-semibold mb-8">Work Experience</h2>
             <div className="space-y-12">
@@ -47,7 +63,19 @@ const CV = () => {
                     "Develop Power BI reports and dashboards using DAX expressions and query data using SQL",
                     "Perform ETL tasks on APCOA and PayByPhone data using dataflows and Power Query M",
                     "Design, build, and maintain data systems using Microsoft Fabric platform",
-                    // ... Add all points from your CV
+                    "Transform data into reusable analytics assets using Microsoft Fabric components",
+                    "Perform ETL tasks and build data models using Python",
+                    "Work with large volumes of data and design systems for efficient data processing",
+                    "Use Power Automate to automate data processes",
+                    "Use Data Engineering principles to build efficient data models in Power BI",
+                    "Evaluate and implement tools for data validation and cleansing",
+                    "Produce and track key performance indicators",
+                    "Use QGIS to create Power BI Shapefiles",
+                    "Work with cloud and on-premises data sources",
+                    "Document detailed business requirements",
+                    "Create interactive dashboards and visualizations",
+                    "Use SharePoint for report sharing",
+                    "Experience with RLS in Power BI"
                   ]
                 },
                 {
@@ -57,11 +85,90 @@ const CV = () => {
                   points: [
                     "Work in the parking sector, analysing APCOA and PayByPhone data for insights",
                     "Develop Power BI reports and dashboards using DAX expressions",
-                    "Perform ETL tasks on APCOA and PayByPhone data using Python/Power Query M",
-                    // ... Add all points
+                    "Perform ETL tasks using Python/Power Query M",
+                    "Maintain automated data processes",
+                    "Evaluate and implement data validation tools",
+                    "Create Power BI Shapefiles with QGIS",
+                    "Query SQL Server database",
+                    "Liaise with clients for requirements",
+                    "Create interactive dashboards",
+                    "Mine/analyse large datasets"
                   ]
                 },
-                // ... Add all other positions
+                {
+                  title: "Work Coach",
+                  company: "Department for Work and Pensions",
+                  period: "October 2020 - September 2021",
+                  points: [
+                    "Provided support for Universal Credit, ESA, and JSA claims",
+                    "Offered quality job search advice",
+                    "Built positive relationships with customers",
+                    "Assisted with the Kickstart Scheme",
+                    "Acted as liaison between employers and candidates",
+                    "Made timely decisions based on customer needs"
+                  ]
+                },
+                {
+                  title: "Cover Teacher",
+                  company: "Various Agencies",
+                  period: "October 2018 - October 2020",
+                  points: [
+                    "Adapted to diverse classroom environments",
+                    "Employed various instructional techniques",
+                    "Managed classroom behavior effectively",
+                    "Collaborated with school staff",
+                    "Built positive student relationships",
+                    "Participated in professional development"
+                  ]
+                },
+                {
+                  title: "Creative Design & Innovation Teacher",
+                  company: "Ministry of Education",
+                  period: "August 2016 - October 2018",
+                  points: [
+                    "Taught Computer Design Information and technology concepts",
+                    "Covered web design and Python programming",
+                    "Developed comprehensive lesson plans",
+                    "Provided individualized support",
+                    "Fostered positive learning environment"
+                  ]
+                },
+                {
+                  title: "School Direct Trainee",
+                  company: "Sir John Cass's Foundation School",
+                  period: "September 2015 - July 2016",
+                  points: [
+                    "Gained practical teaching experience in Physics",
+                    "Developed and delivered lesson plans",
+                    "Facilitated interactive activities",
+                    "Adapted teaching methods for diverse needs",
+                    "Created supportive learning environment"
+                  ]
+                },
+                {
+                  title: "Teacher Assistant",
+                  company: "Sir John Cass's Foundation School",
+                  period: "April 2015 - July 2015",
+                  points: [
+                    "Supported Science department across Key Stages 3-5",
+                    "Assisted with lesson preparation",
+                    "Provided one-on-one student support",
+                    "Fostered critical thinking skills",
+                    "Mentored sixth form students"
+                  ]
+                },
+                {
+                  title: "English Language Teacher",
+                  company: "King Saud University",
+                  period: "September 2013 - July 2014",
+                  points: [
+                    "Enhanced students' English language proficiency",
+                    "Created dynamic lesson plans",
+                    "Tailored teaching approaches",
+                    "Developed reading, writing, speaking, and listening skills",
+                    "Provided individualized feedback and support"
+                  ]
+                }
               ].map((job, index) => (
                 <div key={index} className="relative pl-8 border-l-2 border-secondary">
                   <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary"></div>
@@ -85,7 +192,7 @@ const CV = () => {
         </section>
 
         {/* Qualifications */}
-        <section className="py-12 bg-muted">
+        <section className="py-12">
           <div className="container px-4">
             <h2 className="text-2xl font-semibold mb-6">Qualifications & Certifications</h2>
             <div className="grid gap-6">
@@ -104,7 +211,19 @@ const CV = () => {
                   <li>Microsoft Certified: Azure Data Fundamentals (DP-900)</li>
                   <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300/DA-100)</li>
                   <li>Microsoft Certified: Azure Enterprise Data Analyst Associate (DP-500)</li>
-                  {/* Add all certifications */}
+                  <li>Microsoft Certified: Power Platform App Maker Associate (PL-100)</li>
+                  <li>Microsoft Certified: Azure Data Engineer Associate (DP-203)</li>
+                  <li>Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)</li>
+                  <li>Microsoft Office Specialist: Excel Associate (Microsoft 365 Apps)</li>
+                  <li>Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)</li>
+                  <li>Fundamentals of the Databricks Lakehouse Platform Accreditation</li>
+                  <li>Data Analyst Level 4 Apprenticeship</li>
+                  <li>BCS Level 4 Certificate in Data Analysis Tools</li>
+                  <li>BCS Level 4 Diploma in Data Analysis Concepts</li>
+                  <li>Qualified Teacher Status</li>
+                  <li>Certificate in English Language Teaching to Adults</li>
+                  <li>Google: Agile Project Management</li>
+                  <li>Data Science Professional, Alliance for Data Science Professionals</li>
                 </ul>
               </div>
 
@@ -130,7 +249,7 @@ const CV = () => {
         </section>
 
         {/* Security Checks */}
-        <section className="py-12">
+        <section className="py-12 bg-muted">
           <div className="container px-4">
             <h2 className="text-2xl font-semibold mb-4">Security Checks</h2>
             <div className="card p-6">
