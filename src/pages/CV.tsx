@@ -1,7 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Briefcase, Calendar, GraduationCap } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const CV = () => {
   return (
@@ -16,7 +16,8 @@ const CV = () => {
             <div className="space-y-2 text-primary-foreground/80">
               <p>📍 London, UK</p>
               <p>📧 hamidbanafunzi@hotmail.co.uk</p>
-              <p>📱 +44 7563090345</p>
+              <p>📱 +44 7563090365</p>
+              <p>🌍 Nationality: British</p>
             </div>
           </div>
         </section>
@@ -31,103 +32,109 @@ const CV = () => {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section className="py-12">
-          <div className="container px-4">
-            <h2 className="text-2xl font-semibold mb-6">Key Skills</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="card p-4">
-                <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                  <li>Proficient in Python, Power BI, Excel and SQL</li>
-                  <li>Large dataset management and analysis</li>
-                  <li>Power BI report and dashboard development</li>
-                </ul>
-              </div>
-              <div className="card p-4">
-                <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                  <li>Stakeholder engagement</li>
-                  <li>Project management</li>
-                  <li>Data visualization and insights</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Experience Timeline */}
-        <section className="py-12 bg-muted">
+        <section className="py-12">
           <div className="container px-4">
             <h2 className="text-2xl font-semibold mb-8">Work Experience</h2>
             <div className="space-y-12">
-              {/* Timeline Item */}
-              <div className="relative pl-8 border-l-2 border-secondary">
-                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary"></div>
-                <div className="card p-6">
-                  <div className="flex items-center gap-2 text-secondary mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>August 2023 - Present</span>
+              {[
+                {
+                  title: "Data Insight and Performance Analyst",
+                  company: "Southwark Council",
+                  period: "August 2023 - Present",
+                  points: [
+                    "Work in the parking sector, analysing APCOA and PayByPhone data for insights",
+                    "Develop Power BI reports and dashboards using DAX expressions and query data using SQL",
+                    "Perform ETL tasks on APCOA and PayByPhone data using dataflows and Power Query M",
+                    "Design, build, and maintain data systems using Microsoft Fabric platform",
+                    // ... Add all points from your CV
+                  ]
+                },
+                {
+                  title: "Data Analyst",
+                  company: "Southwark Council",
+                  period: "September 2021 - August 2023",
+                  points: [
+                    "Work in the parking sector, analysing APCOA and PayByPhone data for insights",
+                    "Develop Power BI reports and dashboards using DAX expressions",
+                    "Perform ETL tasks on APCOA and PayByPhone data using Python/Power Query M",
+                    // ... Add all points
+                  ]
+                },
+                // ... Add all other positions
+              ].map((job, index) => (
+                <div key={index} className="relative pl-8 border-l-2 border-secondary">
+                  <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary"></div>
+                  <div className="card p-6">
+                    <div className="flex items-center gap-2 text-secondary mb-2">
+                      <Calendar className="w-4 h-4" />
+                      <span>{job.period}</span>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
+                    <p className="text-foreground/70 mb-4">{job.company}</p>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                      {job.points.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Data Insight and Performance Analyst</h3>
-                  <p className="text-foreground/70 mb-4">Southwark Council</p>
-                  <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                    <li>Analyse APCOA and PayByPhone data for insights</li>
-                    <li>Develop Power BI reports using DAX and SQL</li>
-                    <li>Design and maintain data systems using Microsoft Fabric</li>
-                  </ul>
                 </div>
-              </div>
-
-              <div className="relative pl-8 border-l-2 border-secondary">
-                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-secondary"></div>
-                <div className="card p-6">
-                  <div className="flex items-center gap-2 text-secondary mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>September 2021 - August 2023</span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">Data Analyst</h3>
-                  <p className="text-foreground/70 mb-4">Southwark Council</p>
-                  <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                    <li>Developed Power BI reports and dashboards</li>
-                    <li>Performed ETL tasks using Python/Power Query M</li>
-                    <li>Created geospatial analysis using QGIS</li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Add more timeline items for previous roles */}
+              ))}
             </div>
           </div>
         </section>
 
         {/* Qualifications */}
-        <section className="py-12">
+        <section className="py-12 bg-muted">
           <div className="container px-4">
-            <h2 className="text-2xl font-semibold mb-6">Education & Certifications</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <h2 className="text-2xl font-semibold mb-6">Qualifications & Certifications</h2>
+            <div className="grid gap-6">
               <div className="card p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <GraduationCap className="w-6 h-6 text-secondary" />
-                  <h3 className="text-xl font-semibold">Education</h3>
-                </div>
-                <ul className="space-y-4">
-                  <li>
-                    <p className="font-semibold">MEng in Aerospace Engineering</p>
-                    <p className="text-sm text-foreground/70">Queen Mary University of London (1st Class Hons)</p>
-                  </li>
+                <h3 className="text-xl font-semibold mb-4">Education</h3>
+                <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                  <li>MEng in Aerospace Engineering, Queen Mary University of London (1st Class Hons)</li>
+                  <li>A-Level Mathematics (B)</li>
                 </ul>
               </div>
 
               <div className="card p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <Briefcase className="w-6 h-6 text-secondary" />
-                  <h3 className="text-xl font-semibold">Certifications</h3>
-                </div>
+                <h3 className="text-xl font-semibold mb-4">Professional Certifications</h3>
                 <ul className="list-disc list-inside space-y-2 text-foreground/80">
-                  <li>Microsoft Certified: Power BI Data Analyst Associate</li>
-                  <li>Microsoft Certified: Azure Data Engineer Associate</li>
-                  <li>Microsoft Certified: Fabric Analytics Engineer Associate</li>
+                  <li>Microsoft Certified: Power Platform Fundamentals (PL-900)</li>
+                  <li>Microsoft Certified: Azure Data Fundamentals (DP-900)</li>
+                  <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300/DA-100)</li>
+                  <li>Microsoft Certified: Azure Enterprise Data Analyst Associate (DP-500)</li>
+                  {/* Add all certifications */}
                 </ul>
               </div>
+
+              <div className="card p-6">
+                <h3 className="text-xl font-semibold mb-4">Community & Professional Memberships</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold mb-2">Community Badges</h4>
+                    <ul className="list-disc list-inside space-y-2 text-foreground/80">
+                      <li>Super User Alumni in the Power BI community</li>
+                      <li>Super User in the Power Apps community</li>
+                      <li>Super User in the Power Automate community</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Professional Memberships</h4>
+                    <p className="text-foreground/80">Royal Statistical Society - GradStat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Security Checks */}
+        <section className="py-12">
+          <div className="container px-4">
+            <h2 className="text-2xl font-semibold mb-4">Security Checks</h2>
+            <div className="card p-6">
+              <p className="text-foreground/80">DBS: Enhanced Certificate</p>
             </div>
           </div>
         </section>

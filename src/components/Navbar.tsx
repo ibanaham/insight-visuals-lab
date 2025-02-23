@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 
 interface NavbarProps {
@@ -25,9 +26,9 @@ const Navbar = ({ onOpenCV }: NavbarProps) => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-heading font-bold">
+          <Link to="/" className="text-xl font-heading font-bold">
             The Statistics Lab
-          </a>
+          </Link>
           
           <button 
             className="md:hidden"
@@ -39,11 +40,11 @@ const Navbar = ({ onOpenCV }: NavbarProps) => {
           <div className={`md:flex items-center space-x-8 ${
             isMenuOpen ? 'absolute top-16 left-0 right-0 bg-white/90 backdrop-blur-md p-4 shadow-lg' : 'hidden md:flex'
           }`}>
-            <a href="#home" className="nav-link">Home</a>
-            <a href="#services" className="nav-link">Services</a>
-            <a href="#portfolio" className="nav-link">Portfolio</a>
-            <button onClick={onOpenCV} className="nav-link">CV</button>
-            <a href="#contact" className="nav-link">Contact</a>
+            <a href="/#" className="nav-link">Home</a>
+            <a href="/#services" className="nav-link">Services</a>
+            <a href="/#portfolio" className="nav-link">Portfolio</a>
+            <Link to="/cv" className="nav-link">CV</Link>
+            <a href="/#contact" className="nav-link">Contact</a>
             <LanguageSelector />
           </div>
         </div>
